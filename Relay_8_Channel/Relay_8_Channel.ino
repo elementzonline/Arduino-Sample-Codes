@@ -1,3 +1,9 @@
+/*
+Author: Dhanish
+Created on: 19-08-2014
+Company: Elementz Engineers Guild Pvt Ltd
+*/
+
 // constants won't change. They're used here to
 // set pin numbers:
 const int buttonPin = 8; // the number of the pushbutton pin
