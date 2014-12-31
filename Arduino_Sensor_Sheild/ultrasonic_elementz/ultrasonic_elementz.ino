@@ -8,14 +8,14 @@ Website: http://www.elementzonline.com
  HC-SR04 Ping distance sensor:
  VCC to arduino 5v 
  GND to arduino GND
- Echo to Arduino pin 7 
- Trig to Arduino pin 8
+ Echo to Arduino pin 12 
+ Trig to Arduino pin 11
  
 */
 
 
-#define echoPin 7 // Echo Pin
-#define trigPin 8 // Trigger Pin
+#define echoPin 12 // Echo Pin
+#define trigPin 11 // Trigger Pin
 #define LEDPin 13 // Onboard LED
 
 int maximumRange = 200; // Maximum range needed

@@ -17,7 +17,7 @@ void setup()
 {
   Serial.begin(9600);
 
-  dht.setup(6); // data pin 2
+  dht.setup(5); // data pin 5
 }
 
 void loop()

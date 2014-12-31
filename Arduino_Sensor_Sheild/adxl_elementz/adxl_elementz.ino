@@ -8,9 +8,9 @@ Website: http://www.elementzonline.com
 
 
 
-#define XPin A1// X Pin
-#define YPin A2// Y Pin
-#define ZPin A3// Z Pin
+#define XPin A2// X Pin
+#define YPin A3// Y Pin
+#define ZPin A4// Z Pin
 
 void setup() {
  Serial.begin (9600);
