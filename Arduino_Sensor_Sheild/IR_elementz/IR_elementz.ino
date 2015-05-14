@@ -8,7 +8,7 @@ Website: http://www.elementzonline.com
 
 
 #define OUTPin 13 // Onboard LED
-#define INPin1 0 // 0 for IR1
+#define INPin1 2 // 2 for IR1
 #define INPin2 10 // 10 for IR2
 
 void setup() {
