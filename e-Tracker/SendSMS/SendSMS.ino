@@ -2,7 +2,7 @@
 #include <SoftwareSerial.h>
 #include "gsm.h"
 
-GSM gsm(2,3);
+GSM gsm(3, 2);
 void setup() {
   // put your setup code here, to run once:
   gsm.initGSM(9600);

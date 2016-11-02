@@ -2,7 +2,7 @@
 #include "SoftwareSerial.h"
 #include "gsm.h"
 
-SoftwareSerial softSerial(2,3);
+SoftwareSerial softSerial(3,2);
 SoftwareSerial *gsmSerial = &softSerial;
 
 GSM gsm;

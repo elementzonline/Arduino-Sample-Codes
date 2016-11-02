@@ -3,7 +3,7 @@
 #include "ElementzGSM.h"
 
 String URL = "http://ec2-52-24-224-220.us-west-2.compute.amazonaws.com/tgps.php?Data=";
-SoftwareSerial myserialOut(2, 3);
+SoftwareSerial myserialOut(3,2);
 ElementzGSMshield GSM(&myserialOut);
 String testString = "";
 

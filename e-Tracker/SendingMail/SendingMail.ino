@@ -5,7 +5,7 @@
 
 char message[29] = "Sending from Arduino Success";
 uint8_t email_timeout = 30;//in seconds
-SoftwareSerial myserialOut(2, 3);
+SoftwareSerial myserialOut(3, 2);
 ElementzGSMshield GSM(&myserialOut);
 String testString = "";
 void setup() {

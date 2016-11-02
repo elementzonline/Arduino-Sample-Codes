@@ -4,7 +4,7 @@
 
 char phone_number[11] = "9605xxxxxx";
 String phone2 = "7356xxxxxx";
-SoftwareSerial myserialOut(2, 3);
+SoftwareSerial myserialOut(3, 2);
 ElementzGSMshield GSM(&myserialOut);
 String testString = "";
 void setup() {
