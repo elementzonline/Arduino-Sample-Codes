@@ -1,30 +1,19 @@
 #include <Arduino.h>
 #include "SoftwareSerial.h"
-#include "gsm.h"
+#include "ElementzGSM.h"
 
-SoftwareSerial softSerial(3,2);
-SoftwareSerial *gsmSerial = &softSerial;
-
-GSM gsm;
+SoftwareSerial myserialOut(3, 2);
+ElementzGSMshield GSM(&myserialOut);
 
 void setup(/* arguments */) {
   /* code */
-  gsm.initGSM(gsmSerial, 9600);
   Serial.begin(9600);
+  GSM.begin(9600);
+  Serial.println("Starting");
+  delay(2000);
 
-  delay(3000);
-
-  gsm.SendAT(gsmSerial, "AT", "OK", 1000, 3);
- 
-   gsm.SendAT(gsmSerial, "AT+CREG?", "+CREG: 0,1", 1000, 3);
-  
-
-
-  // SendAT("ATD8129025513;", "OK", 1000, 3);
-  // delay(15000);
-  //
-  // SendAT("ATH", "OK", 1000, 3);
-
+  GSM.SendAT("AT", "OK", 1000, 2);
+  GSM.SendAT("AT+CREG?", "+CREG: 0,0", 1000, 2);
 }
 
 
