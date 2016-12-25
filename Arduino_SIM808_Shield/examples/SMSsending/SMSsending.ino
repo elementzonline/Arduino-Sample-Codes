@@ -11,6 +11,7 @@ void setup() {
    GSM.begin(9600);
   Serial.println("Starting");
   delay(1000);
+  GSM.sendSMSintextFormat();
   
    boolean sms_status = GSM.sendSms("7356xxxxxx", "Test Message");//you can input the number also as a String object 
    if (sms_status == true)
