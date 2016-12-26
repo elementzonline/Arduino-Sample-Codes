@@ -55,6 +55,8 @@ class ElementzGSMshield {
     boolean turnOnGNSS(void);
     boolean turnOffGNSS(void);
     String  getGNSSInfo(void);
+    boolean initializeHTTPService(void);
+    boolean terminateHTTPService(void);
     boolean sendHTTPDATA(const char* URL_attached_with_data);
     boolean sendHTTPDATA(String URL_attached_with_data);
     String  getProcessedGNSSInfo(void);
@@ -86,9 +88,7 @@ class ElementzGSMshield {
     boolean setupEmailFromAddress(String mailId, String Name);
     boolean setupEmailFromAddress(String mailId);
     boolean checkForExptReplyinRcvdString(String recvdString, const char* exptReply);
-    boolean initializeHTTPService(void);
-    boolean terminateHTTPService(void);
-
+   
     Stream *mySerial;
     SoftwareSerial *gsmSerial;
 };

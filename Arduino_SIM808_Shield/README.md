@@ -1,7 +1,7 @@
 Arduino-Sample-Codes
 ====================
 
-Arduino Sample for eTracker module
+Arduino Sample for SIM808 module
 
 Required: Arduino IDE - 1.6.12 or above
 

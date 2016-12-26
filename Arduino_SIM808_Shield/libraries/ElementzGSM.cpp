@@ -548,16 +548,16 @@ boolean ElementzGSMshield::turnOffGNSS(void)
 String ElementzGSMshield::getGNSSInfo(void)
 {
   SendAT("AT+CGNSINF");
-  String infoString = readReply(5000, 5);
+  String infoString = readReply(5000, 1);
   return infoString;
 }
 
 String ElementzGSMshield::getProcessedGNSSInfo(void)
 {
   SendAT("AT+CGNSINF");
-  String infoString = readReply(5000, 5);
-  infoString.replace("\r\n\r\nOK\r\n", "");
-  infoString.replace("\r\n+CGNSINF", "GNSINFO");
+  String infoString = readReply(5000, 1);
+  infoString.replace("\r\n+CGNSINF: ","");
+  infoString.replace("\r","");
   return infoString;
 }
 
