@@ -261,7 +261,7 @@ boolean ElementzGSMshield::sendSms(const char* phone_number, const char* Content
     mySerial->print(Content);
  #if (DEBUG == 1)
     Serial.println(Content);
-#endif  
+#endif
     mySerial->write(0x1A);
     SMSsenderString = readReply(120000, 1);
 #if (DEBUG == 1)
@@ -290,7 +290,7 @@ boolean ElementzGSMshield::sendSms(String phone_number, String Content)
     mySerial->print(Content);
  #if (DEBUG == 1)
     Serial.println(Content);
-#endif   
+#endif
     mySerial->write(0x1A);
     SMSsenderString = readReply(120000, 1);
 #if (DEBUG == 1)
@@ -567,6 +567,7 @@ boolean ElementzGSMshield::initializeHTTPService(void)
   if (http_status == true)
   {
     http_status = SendAT("AT+HTTPPARA=\"CID\",1", "OK", 2000, 1, 1);
+    http_status = SendAT("AT+HTTPPARA=\"TIMEOUT\",30", "OK", 2000, 1, 1);
   }
   return http_status;
 
@@ -586,7 +587,7 @@ boolean ElementzGSMshield::sendHTTPDATA(const char* URL_attached_with_data)
     http_status = SendAT("AT+HTTPPARA=\"URL\",\"" + String(URL_attached_with_data) + "\"", "OK", 10000, 1, 1);
     if (http_status == true)
     {
-      http_status = SendAT("AT+HTTPACTION=0", "200", 10000, 1, 3);
+      http_status = SendAT("AT+HTTPACTION=0", "200", 31000, 1, 3);
     }
   }
 
@@ -602,7 +603,7 @@ boolean ElementzGSMshield::sendHTTPDATA(String URL_attached_with_data)
     http_status = SendAT("AT+HTTPPARA=\"URL\",\"" + URL_attached_with_data + "\"", "OK", 10000, 1, 1);
     if (http_status == true)
     {
-      http_status = SendAT("AT+HTTPACTION=0", "200", 10000, 1, 3);
+      http_status = SendAT("AT+HTTPACTION=0", "200", 31000, 1, 3);
     }
   }
 
