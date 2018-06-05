@@ -1,0 +1,18 @@
+3.3 Supply from Arduino boards are not sufficient (100 mA for transmission) - PA_BOOST
+
+Frequency to be set to ISM band only (410-525 MHz)
+
+
+Spread Factor 12 --> -141 dBm(bandwidth 7.8KHz kHz)
+
+LoRa specifications : Page 18 in SX1278 datasheet
+
+RF sensitivity, Long-Range Mode, highest LNA gain, Band 2 or 3, using split Rx/Tx path
+7.8 kHz bandwidth --> -148 dBm    (Table 10)
+
+
+////////////////////
+
+LoRa is a new, private and spread-spectrum modulation technique which allows sending data at extremely low data-rates to extremely long ranges. The low data-rate (down to few bytes per second) and LoRa modulation lead to very low receiver sensitivity (down to -134 dBm), which combined to an output power of +14 dBm means extremely large link budgets: up to 148 dB., what means more than 22km (13.6 miles) in LOS links and up to 2km (1.2miles) in NLOS links in urban environment (going through buildings).
+
+https://www.cooking-hacks.com/documentation/tutorials/extreme-range-lora-sx1272-module-shield-arduino-raspberry-pi-intel-galileo
