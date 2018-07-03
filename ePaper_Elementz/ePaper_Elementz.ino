@@ -1,4 +1,6 @@
-
+/*
+ * Modified by Navaneeth Krishnan, For Elementz Engineers Guild Pvt Ltd
+*/
 #include <SPI.h>
 #include "epd2in9.h"
 #include "epdpaint.h"
