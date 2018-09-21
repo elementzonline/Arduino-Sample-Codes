@@ -1,10 +1,13 @@
 ## Install the required application using the following commands
 
 `sudo apt-get update`
+
 `sudo apt-get install ppp`
 
 ## Now we want to configure the ppp interface to communicate with our GSM modem. This can be done using the following instructions
+
 `cd /etc/ppp/peers/ `
+
 `sudo nano rnet`
 
 Then include the following contents to the rnet file
@@ -46,14 +49,17 @@ local
 > Special note: Here we assume that the modem can be communicated using ttyUSB0 interface and baudrate 115200. Please ensure this beforehand and then try the instructions in the blog post. 
 
 Edit the following file if the SIM is protected by a PIN
+
 `nano /etc/chatscripts/gprs`
 
 Finally type the following command to activate the new interface
+
 `sudo pon rnet` 
 
 > At this point you will be noticing a fast blink rate of network led in our GSM module which represents the GPRS activity.
 
 We can also deactivate the PPP interface if required using the following command
+
 `sudo poff rnet`
 
  
