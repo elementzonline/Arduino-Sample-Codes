@@ -1,3 +1,7 @@
+/*
+Developed by Nandu, Anandu, Unnikrishnan 
+Company: Elementz Engineers Guild Pvt Ltd
+*/
 #include<SoftwareSerial.h>
 SoftwareSerial mySerial(3,2);
 #define sw 5
